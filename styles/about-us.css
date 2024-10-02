@@ -1,0 +1,192 @@
+/* styles/about-us.css */
+
+html {
+  font-size: 90%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 9rem;
+  box-sizing: border-box;
+}
+
+.about-us-container {
+  padding: 50px;
+  background: #f4f4f4;
+  text-align: center;
+}
+
+.about-us-container h1 {
+  font-size: 2.5em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.about-us-container h2 {
+  font-size: 2em;
+  color: #333;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.about-us-container p,
+.about-us-container ul {
+  font-size: 1.2em;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.about-us-container ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.about-us-container ul li {
+  margin-bottom: 10px;
+}
+
+.about-us-container a {
+  color: #b6895b;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.about-us-container .btn {
+  background-color: #ffffff; /* Warna latar belakang */
+  color: #b6895b; /* Warna teks */
+  padding: 10px 20px; /* Padding */
+  /* border: solid 0.1px;  */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  /* border-color: #000000; */
+  border-radius: 5px; /* Sudut bulatan */
+  font-size: 1.2em; /* Ukuran teks */
+  cursor: pointer; /* Ubah kursor saat hover */
+  transition: background-color 0.3s; /* Animasi perubahan warna latar belakang */
+}
+
+.about-us-container .btn:hover {
+  background-color: #000000; /* Warna latar belakang saat hover */
+  color:#b6895b;
+}
+.about-us-container a:hover {
+  text-decoration: underline;
+}
+
+body {
+  font-family: Poppins, "Source Sans Pro";
+  margin: 0;
+}
+
+h1 span {
+  color:#006600;
+}
+
+h2 span {
+  color:#006600;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+  border-radius: 5px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #474e5d;
+  color: white;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after,
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+/* Adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+  .about-us-container {
+    padding: 30px;
+  }
+
+  .about-us-container h1 {
+    font-size: 2em;
+  }
+
+  .about-us-container h2 {
+    font-size: 1.8em;
+  }
+
+  .about-us-container p,
+  .about-us-container ul {
+    font-size: 1em;
+  }
+
+  .column {
+    width: 100%;
+    display:block;
+  }
+}
+
+/* Further adjustments for even smaller screens */
+@media screen and (max-width: 480px) {
+  .about-us-container {
+    padding: 20px;
+  }
+
+  .about-us-container h1 {
+    font-size: 1.5em;
+  }
+
+  .about-us-container h2 {
+    font-size: 1.5em;
+  }
+
+  .about-us-container p,
+  .about-us-container ul {
+    font-size: 0.9em;
+  }
+
+  .column {
+    width: 100%;
+    display:block;
+  }
+}

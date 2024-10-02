@@ -1,0 +1,113 @@
+h1 {
+  text-align: center;
+}
+
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-card {
+  display: block;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.profile-pic {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 20px auto;
+  background-color: transparent;
+}
+
+.profile-pic img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.profile-pic img:hover {
+  transform: scale(1.2);
+  transition: all 0.3s ease;
+}
+
+.profile-info {
+  flex: 1;
+  padding: 20px;
+}
+
+.profile-info label {
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.profile-info p {
+  margin-bottom: 20px;
+}
+
+.profile-info label,
+.profile-info p {
+  font-size: 16px;
+  color: #333;
+  text-align: center;
+}
+
+.profile-info label:hover {
+  color: #337ab7;
+  cursor: pointer;
+}
+
+.profile-info p:hover {
+  color: #337ab7;
+  cursor: pointer;
+}
+
+/* Adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 90%;
+    margin: 20px auto;
+    padding: 10px;
+  }
+
+  .profile-card {
+    margin-bottom: 10px;
+  }
+
+  .profile-pic {
+    width: 100px;
+    height: 100px;
+    margin: 10px auto;
+  }
+
+  .profile-info {
+    padding: 10px;
+  }
+}
+
+/* Further adjustments for even smaller screens */
+@media screen and (max-width: 480px) {
+  .profile-pic {
+    width: 80px;
+    height: 80px;
+    margin: 5px auto;
+  }
+
+  .profile-info label,
+  .profile-info p {
+    font-size: 14px;
+  }
+}

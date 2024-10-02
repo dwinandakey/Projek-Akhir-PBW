@@ -1,0 +1,367 @@
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 2.5em;
+}
+
+h2 {
+  margin-bottom: 10px;
+  font-size: 1.5em;
+  color: #333333;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="file"],
+form textarea {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0 10px;
+  border: 2px solid #000000;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+form input[type="submit"] {
+  background-color: #28a745;
+  color: #ffffff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+form input[type="submit"]:hover {
+  background-color: #218838;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+table,
+th,
+td {
+  border: 1px solid #000000;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: center;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+img {
+  max-width: 100px;
+  height: auto;
+}
+
+.container form input[type="text"],
+.container form input[type="number"],
+.container form input[type="file"],
+.container form textarea {
+  display: grid;
+  width: 100%; /* Mengatur lebar input */
+  padding: 8px;
+  margin: 5px 5px 10px 0; /* Margin atas, kanan, bawah, kiri */
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.container form button[type="submit"] {
+  width: 120px; /* Menetapkan lebar tombol submit */
+  padding: 0.5rem 1rem;
+  margin: 5px 0 10px; /* Margin atas, bawah */
+  background-color: #28a745; /* Warna latar belakang */
+  color: #ffffff; /* Warna teks */
+  border: none;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.select-image {
+  display: inline-block;
+  color: #000000;
+  border: solid 1px #000000;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.container form button[type="submit"]:hover {
+  transform:scale(1.1);
+}
+
+/* Style for pagination links */
+.pagination {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.pagination a {
+  display: inline-block;
+  padding: 8px 16px;
+  text-decoration: none;
+  color: #28a745; /* Warna teks */
+  border: 1px solid #28a745; /* Warna garis pinggir */
+  border-radius: 4px;
+}
+
+.pagination a.active {
+  background-color: #30c052; /* Warna latar belakang untuk halaman saat ini */
+  color: #ffffff; /* Warna teks saat aktif */
+}
+
+.pagination a:hover {
+  display: inline-block;
+  padding: 8px 16px;
+  text-decoration: none;
+  color: black;
+  border: 1px solid #000000; /* Warna garis pinggir */
+  border-radius: 4px;
+}
+
+.field.text-gambar p {
+  margin-bottom: 0.5rem;
+  color: black;
+}
+
+.add-menu-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.add-menu-container .img-area {
+  /* border: 2px dashed #ccc;
+  border-radius: 0.5rem; */
+  padding: 1rem;
+  position: relative;
+  cursor: pointer;
+  width: 15%;
+  height: auto;
+  background: #f2f2f2;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: column;
+  flex-direction: column;
+}
+
+.add-menu-container .img-area::before {
+  content: attr(data-img);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-weight: 500;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: 200;
+}
+
+.add-menu-container .img-area.active:hover::before {
+  opacity: 1;
+}
+
+.add-menu-container .img-area .icon {
+  font-size: 3rem;
+  color: #ccc;
+  margin-bottom: 0.5rem;
+}
+
+.add-menu-container .img-area h3 {
+  margin-bottom: 0.5rem;
+  color: black;
+}
+
+.add-menu-container .img-area p {
+  color: #666;
+}
+
+.add-menu-container .img-area p span {
+  font-weight: bold;
+}
+
+.add-menu-container .img-area img {
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+  z-index: 100;
+}
+
+.add-menu-container .img-area-item {
+  /* border: 2px dashed #ccc;
+  border-radius: 0.5rem; */
+  padding: 1rem;
+  position: relative;
+  cursor: pointer;
+  width: 100%;
+  height: auto;
+  background: #f2f2f2;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: column;
+  flex-direction: column;
+}
+
+.add-menu-container .img-area-item::before {
+  content: attr(data-img);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-weight: 500;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: 200;
+}
+
+.add-menu-container .img-area-item.active:hover::before {
+  opacity: 1;
+}
+
+.add-menu-container .img-area-item .icon {
+  font-size: 3rem;
+  color: #ccc;
+  margin-bottom: 0.5rem;
+}
+
+.add-menu-container .img-area-item h3 {
+  margin-bottom: 0.5rem;
+  color: var(--text);
+}
+
+.add-menu-container .img-area-item p {
+  color: #666;
+}
+
+.add-menu-container .img-area-item p span {
+  font-weight: bold;
+}
+
+.add-menu-container .img-area-item img {
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+  z-index: 100;
+}
+
+#file {
+  opacity: 0;
+}
+
+select {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 10px;
+    overflow-x: auto; /* Tambahkan overflow-x: auto; agar dapat di-scroll secara horizontal */
+  }
+
+  h1 {
+    font-size: 1.8em;
+  }
+
+  h2 {
+    font-size: 1.2em;
+  }
+
+  form input[type="text"],
+  form input[type="number"],
+  form input[type="file"],
+  form textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  form button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 10px;
+  }
+
+  /* Style for pagination links on smaller screens */
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .pagination a {
+    margin: 0 5px;
+  }
+
+  table {
+    font-size: 14px;
+  }
+
+  th,
+  td {
+    padding: 8px;
+  }
+}

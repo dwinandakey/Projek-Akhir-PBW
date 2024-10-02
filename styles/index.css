@@ -1,0 +1,532 @@
+:root {
+  --primary: #b6895b;
+  --bg: #f4f4f4;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  outline: none;
+  border: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg);
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Home Section */
+.home {
+  min-height: 10vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+/* CSS untuk slide */
+.mySlides {
+  display: none;
+  position: relative;
+  text-align: center;
+}
+
+.mySlides img {
+  width: 100%;
+  max-height: 475px;
+  object-fit: cover;
+  filter: blur(1px) contrast(0.8);
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* CSS untuk teks pada slide */
+.slide-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white; /* Warna teks */
+  text-align: center;
+  /* border: solid 1px; */
+  /* border-color: white; */
+  /* background-color: transparent;
+  backdrop-filter: blur(1px) contrast(0.8);
+  border-radius: 5px;
+  padding: 20px; */
+}
+
+/* The dots/bullets/indicators */
+.dot-container {
+  text-align: center;
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.naturegear-box-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.naturegear-box-container a {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #000000;
+  background-color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.naturegear-box-container a:hover {
+  background-color: #eee;
+}
+
+.services,
+.products,
+.reviews {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.service,
+.product {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 10px;
+  width: 20%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.service a,
+.product a,
+.reviews a {
+  color: white; /* Warna mewarisi dari elemen induk */
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.service h3,
+.product h3,
+.reviews h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.service p,
+.product p,
+.reviews p {
+  color: #666;
+}
+
+.service {
+  transition: background-color 0.3s ease;
+}
+
+.service:hover {
+  background-color: #fff; /* Warna latar belakang saat hover */
+  border-radius: 8px;
+}
+
+/* CSS untuk tautan "Learn More" */
+.service-link {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #000; /* Menggunakan warna utama */
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.service-link:hover {
+  background-color: #555; /* Warna lebih gelap saat hover */
+  transform: scale(1.05); /* Efek memperbesar saat hover */
+}
+
+.product {
+  transition: background-color 0.3s ease;
+}
+
+.product:hover {
+  background-color: #eee; /* Warna latar belakang saat hover */
+  border-radius: 8px;
+}
+
+.product img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+  background-color: transparent; /* Menjadikan latar belakang gambar transparan */
+}
+
+.product img:hover {
+  transition: transform 0.3s ease;
+  transform: scale(1.1);
+}
+.see-more {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.see-more a {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #000;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.see-more a:hover {
+  background-color: #555;
+}
+
+h2 span {
+  color: #b6895b;
+}
+
+/* Centering titles */
+#services h2,
+#products h2 {
+  text-align: center;
+  margin: 20px 0;
+}
+
+#reviews h2 {
+  text-align: center;
+  margin: 50px 0 20px 0;
+}
+
+/* Gaya untuk tombol "Add to Cart" */
+.products a.add-cart {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 10px 20px;
+  color: black; /* Mengatur warna teks menjadi hitam */
+  background-color: transparent; /* Menghilangkan latar belakang */
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.products a.add-cart:hover {
+  transition: transform 0.3s ease;
+  transform: scale(1.2);
+}
+
+html {
+  font-size: 90%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 9rem;
+}
+
+/* Heading styles */
+.heading {
+  color: var(--black);
+  font-size: 5rem;
+  text-align: center;
+}
+
+.heading span {
+  color: var(--ijo);
+}
+
+.heading-description {
+  text-align: center;
+  font-size: 1.8rem;
+  color: var(--para-font);
+  margin-top: 2rem;
+}
+
+/* Reviews section styles */
+.reviews {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  padding: 0 10%;
+}
+
+.reviews-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  width: 75%;
+  justify-items: center;
+  align-items: center;
+}
+
+/* Review box styles */
+.review-box-container {
+  display: flex;
+  width: 100%;
+}
+
+.review-box {
+  width: 100%;
+  max-width: 50rem;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Mengurangi bayangan */
+  border-radius: 0.5rem; /* Mengurangi radius border */
+  background-color: var(--white);
+  padding: 1rem; /* Mengurangi padding */
+  overflow: hidden;
+  margin: 10px 10px 10px 10px;
+  transition: transform 0.3s ease;
+}
+
+.review-box:hover {
+  transform: translateY(-10px);
+}
+
+/* Profile image styles */
+.profile-img {
+  width: 3rem; /* Mengurangi ukuran gambar profil */
+  height: 3rem; /* Mengurangi ukuran gambar profil */
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 10px;
+}
+
+.profile-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Profile section styles */
+.profile {
+  display: flex;
+  align-items: center;
+}
+
+.time {
+  text-align: right;
+  font-size: 0.8rem;
+  color: var(--para-font);
+}
+
+.name-user {
+  display: flex;
+  flex-direction: column;
+}
+
+.name-user strong {
+  color: var(--black);
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+}
+
+.name-user span {
+  color: #979797;
+  font-size: 0.8rem;
+}
+
+.box-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Client comment styles */
+.client-comment p {
+  font-size: 1.2rem;
+  color: #4b4b4b;
+}
+
+input#add-comment {
+  border: 1px solid #ccc; /* Warna dan ketebalan garis */
+  border-radius: 5px; /* Radius sudut */
+  padding: 0.5rem; /* Ruang isi di sekitar teks */
+  width: 100%; /* Lebar input sesuai dengan parentnya */
+  box-sizing: border-box; /* Menghitung padding dan border ke dalam total lebar */
+  margin-bottom: 1rem;
+}
+
+button.add-cart:hover {
+  transition: width 0.3s;
+  transform: scale(1.1);
+}
+
+/* Responsive CSS */
+
+/* Media Queries for small screens */
+@media (max-width: 480px) {
+  .slide-text {
+    font-size: 1rem;
+  }
+
+  .heading {
+    font-size: 2rem;
+  }
+
+  .heading-description {
+    font-size: 1rem;
+  }
+
+  .service,
+  .product,
+  .review-box {
+    padding: 10px;
+    width: 100%;
+  }
+
+  .service h3,
+  .product h3,
+  .reviews h3 {
+    font-size: 1rem;
+  }
+
+  .service p,
+  .product p,
+  .reviews p {
+    font-size: 0.8rem;
+  }
+
+  .service-link,
+  .products a.add-cart {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+
+  .prev,
+  .next {
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  .dot {
+    height: 10px;
+    width: 10px;
+  }
+
+  .product img {
+    max-width: 50%;
+    height: auto;
+    margin-bottom: 15px;
+    background-color: transparent; /* Menjadikan latar belakang gambar transparan */
+  }
+}
+
+/* Media Queries for medium screens */
+@media (max-width: 1024px) {
+  .service,
+  .product,
+  .reviews {
+    width: 45%;
+    margin: 10px 0;
+  }
+
+  .prev,
+  .next {
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  .service,
+  .product,
+  .reviews {
+    width: 80%;
+    margin: 10px 10%;
+  }
+
+  .prev,
+  .next {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .dot {
+    height: 12px;
+    width: 12px;
+  }
+
+  .product img {
+    max-width: 50%;
+    height: auto;
+    margin-bottom: 15px;
+    background-color: transparent; /* Menjadikan latar belakang gambar transparan */
+  }
+}
+

@@ -1,0 +1,368 @@
+:root {
+  --primary: #b6895b;
+  --bg: #f4f4f4;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  outline: none;
+  border: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999; /* Pastikan header berada di atas elemen lain */
+  background-color: #222222;
+  color: white;
+  padding: 1em 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-container img {
+  width: 60px;
+  height: 60px;
+  margin-right: 10px;
+}
+
+.logo-container h1 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  line-height: 1.5;
+  font-family: Poppins, "Source Sans Pro";
+  white-space: nowrap;
+  display: flex;
+  align-items: baseline;
+  margin: 0; /* Menghapus margin agar teks lebih dekat dengan logo */
+}
+
+.logo-container h1 a {
+  color: white;
+  text-decoration: none;
+}
+
+.naturegear1 {
+  font-size: 1.5rem;
+  font-weight: 900;
+  line-height: 1.5;
+  color: #4caf50;
+  font-family: Poppins, "Source Sans Pro";
+}
+
+.naturegear2 {
+  font-size: 1.5rem;
+  font-weight: 900;
+  line-height: 1.5;
+  color: #795548;
+  font-family: Poppins, "Source Sans Pro";
+}
+
+header nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+header nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+header nav ul li.cart img {
+  width: 20px; /* Sesuaikan dengan ukuran yang diinginkan */
+  height: 20px; /* Sesuaikan dengan ukuran yang diinginkan */
+  vertical-align: middle; /* Posisikan gambar ke tengah secara vertikal */
+  justify-content: center;
+  align-items: center;
+}
+header nav ul li.search img {
+  width: 20px; /* Sesuaikan dengan ukuran yang diinginkan */
+  height: 20px; /* Sesuaikan dengan ukuran yang diinginkan */
+  vertical-align: middle; /* Posisikan gambar ke tengah secara vertikal */
+  justify-content: center;
+  align-items: center;
+}
+header nav ul li.my-account img {
+  width: 24px; /* Sesuaikan dengan ukuran yang diinginkan */
+  height: 24px; /* Sesuaikan dengan ukuran yang diinginkan */
+  margin-right: 5px; /* Sesuaikan jarak antara gambar dan teks "My-account" */
+  vertical-align: middle; /* Posisikan gambar ke tengah secara vertikal */
+  justify-content: center;
+  align-items: center;
+  margin-left: -5px;
+}
+
+header nav ul li a:hover {
+  background-color: #555;
+  color: #fff;
+  border-radius: 4px;
+}
+
+.menubutton {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.menubutton .menu-icon {
+  font-size: 24px;
+  color: #fff;
+}
+
+.smallscreen {
+  display: none;
+  cursor: pointer;
+}
+
+.listmenu {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  background-color: #222222;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  width: 100%;
+  z-index: 12;
+}
+
+/* Sembunyikan menu saat class "close" ditambahkan */
+.listmenu.close {
+  display: none;
+}
+
+.smallscreen {
+  display: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  color: black;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #a9a9a9;
+  color: #000000;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.cart span {
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 14px;
+  position: absolute;
+  top: -5px; /* Posisi atas dari span */
+  right: 50px; /* Posisi kanan dari span */
+  transform: translate(50%, -50%); /* Untuk posisi yang lebih tepat */
+}
+
+@media screen and (max-width: 1080px) {
+  header {
+    font-size: 1.2rem;
+  }
+
+  .bigscreen {
+    display: none;
+  }
+
+  nav button {
+    margin-top: 10px;
+    margin-right: 10px;
+  }
+
+  .smallscreen {
+    display: inline-flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  nav {
+    justify-content: space-between;
+    background-color: #262d2f;
+    padding: 0;
+    flex-wrap: wrap;
+  }
+
+  .fa-caret-down:before {
+    color: white;
+    margin-right: 10px;
+  }
+
+  .dropbtn {
+    color: white;
+  }
+
+  .my-account.dropdown a {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .my-account.dropdown img {
+    width: 24px; /* Ukuran lebih kecil untuk smallscreen */
+    height: 24px; /* Ukuran lebih kecil untuk smallscreen */
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+    vertical-align: middle;
+  }
+
+  .content a {
+    color:rgb(255, 255, 255);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .menubutton {
+    display: block;
+    margin-right: 10px;
+    margin-left: 10px;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+
+  .listmenu {
+    /* position: relative; */
+    display: inline-block;
+    /* width: 100%; */
+    width: 230px;
+    background-color: #f9f9f9;
+    align-items: center;
+    justify-content: center;
+    /* height: 70vh; */
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    color: black;
+    margin-top: -9px;
+    /* padding: 12px 16px; */
+  }
+
+  .listmenu ul {
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+
+  .listmenu li {
+    display: block;
+    margin: 10px 5px;
+    margin: 5px 0;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+  }
+
+  .listmenu li:hover {
+    background-color: #a9a9a9;
+    color: #000000;
+  }
+
+  .listmenu li a {
+    padding: 15px;
+    box-sizing: border-box;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: rgb(0, 0, 0);
+  }
+
+  .close {
+    display: none;
+  }
+
+  .logo-container img {
+    width: 40px; /* Ukuran lebih kecil untuk smallscreen */
+    height: 40px; /* Ukuran lebih kecil untuk smallscreen */
+    vertical-align: middle;
+  }
+
+  .dropbtn img {
+    width: 20px; /* Ukuran lebih kecil untuk smallscreen */
+    height: 20px; /* Ukuran lebih kecil untuk smallscreen */
+    vertical-align: middle;
+  }
+
+  .logo-container h1 {
+    font-size: 1.2rem; /* Ukuran lebih kecil untuk smallscreen */
+  }
+
+  header nav ul li a {
+    padding: 5px; /* Padding lebih kecil untuk smallscreen */
+    font-size: 0.9rem; /* Ukuran font lebih kecil untuk smallscreen */
+  }
+
+  header nav ul li.cart img,
+  header nav ul li.my-account img {
+    width: 16px; /* Ukuran lebih kecil untuk smallscreen */
+    height: 16px; /* Ukuran lebih kecil untuk smallscreen */
+  }
+
+  .cart span {
+    font-size: 12px; /* Ukuran font lebih kecil untuk smallscreen */
+    top: -3px; /* Posisi lebih sesuai untuk smallscreen */
+    right: 52px; /* Posisi lebih sesuai untuk smallscreen */
+  }
+
+  .menubutton {
+    font-size: 1rem; /* Ukuran lebih kecil untuk smallscreen */
+  }
+}

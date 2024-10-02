@@ -1,0 +1,128 @@
+/* styles/contact-us.css */
+:root {
+  --main-color: #b6895b;
+  --hover-color: #b6895b;
+}
+
+.contact {
+  padding: 50px 0;
+  text-align: center;
+  background: #f4f4f4;
+}
+
+.contact .heading {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.contact .heading span {
+  color: #006600;
+}
+
+.contact .container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2.5rem 0;
+}
+
+.contact .container a {
+  color: black;
+}
+
+.contact .container .contact-box {
+  border: 0.2rem solid var(--main-color);
+  border-radius: 1rem;
+  padding: 2rem;
+  cursor: pointer;
+  background: #fff; /* Changed from transparent to #fff for a consistent look */
+  border: 2px solid #ccc;
+  width: 300px;
+  transition: border-color 0.3s, background-color 0.3s, transform 0.3s,
+    box-shadow 0.3s;
+}
+
+.contact .container .contact-box div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.3rem 0;
+  max-height: max-content;
+}
+
+.contact .contact-box:hover {
+  border-color: #ffffff;
+  background-color: #000000;
+  transform: scale(1.05); /* Smooth scaling effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+.contact .container .contact-box div i {
+  width: 4rem;
+  height: 4rem;
+  background: #000000;
+  color: white;
+  text-align: center;
+  font-size: 1.3rem;
+  line-height: 4rem;
+  border-radius: 100%;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+.contact .contact-box h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  transition: color 0.3s;
+}
+
+.contact .contact-box span {
+  color: #555;
+  font-size: 1em;
+  transition: color 0.3s 0.3s; /* Delays the span color change */
+}
+
+.contact .container .contact-box div h2 span {
+  font-weight: 300;
+}
+
+.contact .container .contact-box div p {
+  font-size: 1.5rem;
+}
+
+.contact .contact-box i {
+  font-size: 2em;
+  color: var(--main-color);
+  margin-top: 10px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.contact .contact-box:hover i,
+.contact .contact-box:hover h2,
+.contact .contact-box:hover span {
+  color: var(--hover-color);
+}
+
+.contact .container .contact-box:hover div i {
+  background: #ffffff;
+  color: #000000;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+/* Adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+  .contact .container {
+    padding: 2rem;
+  }
+
+  .contact .container .contact-box {
+    width: calc(50% - 2rem);
+  }
+}
+
+/* Further adjustments for even smaller screens */
+@media screen and (max-width: 480px) {
+  .contact .container .contact-box {
+    width: calc(100% - 2rem);
+  }
+}

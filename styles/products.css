@@ -1,0 +1,426 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --primary: #b6895b;
+  --bg: #f4f4f4;
+  --shadow: rgba(0, 0, 0, 0.1);
+  --font-heading: black; /* Tambahan untuk warna font */
+  --kuning: #b6895b; /* Sesuaikan dengan primary */
+  --ijo: #333; /* Warna ijo yang digunakan */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  outline: none;
+  border: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg);
+  color: #333;
+  line-height: 1.6;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 0.1rem;
+  margin-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+/* Main Section */
+.products {
+  padding: 2rem;
+  text-align: center;
+}
+
+.products h2 {
+  color: black;
+  margin-bottom: 2rem;
+}
+
+.product-container {
+  display: contents;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.product {
+  background-color: #fff;
+  border: 1px solid var(--shadow);
+  border-radius: 10px;
+  box-shadow: 0 0 10px var(--shadow);
+  padding: 2rem;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product:hover {
+  transform: scale(1.05);
+  box-shadow: 3px 3px 5px var(--shadow);
+}
+
+.product img {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.product img:hover {
+  transition: transform 0.3s ease;
+  transform: scale(1.1);
+}
+
+.product h3 {
+  font-size: 1.5rem;
+  color: black;
+  margin-bottom: 0.5rem;
+}
+
+.product p {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.product p.price {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--font-heading);
+}
+
+.product a {
+  display: block;
+  margin-top: 1rem;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: var(--primary);
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.product a:hover {
+  background-color: #555;
+}
+
+.product a.add-cart {
+  display: block;
+  margin-top: 1rem;
+  padding: 10px 20px;
+  color: black; /* Mengatur warna teks menjadi hitam */
+  background-color: transparent; /* Menghilangkan latar belakang */
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+button.add-cart:hover {
+  transition: width 0.3s;
+  transform: scale(1.1);
+}
+
+/* Search and Sub-header Section */
+.sub-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sub-header .jenis {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.jenis {
+  margin: 0rem 2rem;
+  cursor: pointer;
+  transition: color 0.3s;
+  font-weight: bold;
+  padding: 1.3rem 0;
+  letter-spacing: 0.1rem;
+}
+
+.jenis i {
+  font-size: 3rem;
+  margin: 1.4rem;
+  color: var(--font-heading);
+}
+
+.jenis p {
+  font-size: 1.6rem;
+  color: var(--font-heading);
+}
+.jenis p:hover {
+  transition: width 0.3s;
+  transform: scale(1.05);
+}
+
+.search-box::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--font-heading);
+  transition: width 0.3s;
+}
+
+.jenis:hover::after,
+.jenis:active:after,
+.search-box:hover::after {
+  width: 100%;
+}
+
+.search-box {
+  position: relative;
+  width: 6rem;
+  height: 6rem;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.search-box.active {
+  background-color: transparent;
+  width: 30rem;
+}
+
+.search-box input.cari {
+  height: 100%;
+  width: 100%;
+  border: none;
+  background: #fff;
+  font-size: 1.6rem;
+  border-radius: 50px;
+  padding: 0 60px 0 20px;
+  outline: none;
+  opacity: 0;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.search-box input.cari.active {
+  opacity: 1;
+}
+
+.search-box .search-btn {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  z-index: 1;
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  color: var(--font-heading);
+  background: #fff;
+  font-size: 20px;
+  text-align: center;
+  line-height: 50px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.search-box .search-btn.active {
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  color: #fff;
+  background: var(--ijo);
+  transform: translateY(-50%) rotate(360deg);
+}
+
+.search-box .cancel-btn {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  color: var(--font-heading);
+  font-size: 25px;
+  cursor: pointer;
+  transition: all 0.5s 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.search-box .cancel-btn.active {
+  background-color: transparent;
+  right: -40px;
+  transform: translateY(-50%) rotate(360deg);
+}
+
+.search-box .search-data {
+  text-align: center;
+  padding-top: 7px;
+  color: var(--black);
+  font-size: 1.2rem;
+  word-wrap: break-word;
+}
+
+.search-box .search-data.active {
+  display: none;
+}
+/* Pagination Section */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.pagination a {
+  padding: 10px 20px;
+  margin: 0 5px;
+  background-color: var(--primary);
+  color: #fff;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.pagination a:hover {
+  background-color: #555;
+}
+
+.pagination a.disabled {
+  pointer-events: none;
+  background-color: #ccc;
+  color: #666;
+}
+/* Responsive CSS */
+
+/* Media Queries for small screens */
+@media (max-width: 480px) {
+  h2 {
+    font-size: 2rem;
+  }
+
+  .sub-header .jenis i {
+    font-size: 2rem;
+    margin: 1rem;
+  }
+
+  .sub-header .jenis p {
+    font-size: 1.2rem;
+  }
+
+  .search-box {
+    width: 100%;
+  }
+
+  .search-box input.cari {
+    font-size: 1.2rem;
+    padding: 0 50px 0 10px;
+  }
+
+  .search-box .search-btn,
+  .search-box .cancel-btn {
+    height: 40px;
+    width: 40px;
+    font-size: 18px;
+  }
+
+  .product {
+    padding: 1rem;
+  }
+
+  .product h3 {
+    font-size: 1.2rem;
+  }
+
+  .product p {
+    font-size: 1rem;
+  }
+
+  .product p.price {
+    font-size: 1rem;
+  }
+
+  .product a,
+  .product button.add-cart {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Media Queries for medium screens */
+@media (max-width: 1024px) {
+  .product-container {
+    flex-direction: column;
+  }
+
+  .product {
+    width: 45%;
+    margin: 1rem auto;
+  }
+
+  .sub-header .jenis i {
+    font-size: 2.5rem;
+  }
+
+  .sub-header .jenis p {
+    font-size: 1.4rem;
+  }
+}
+
+/* General responsive adjustments for larger screens */
+@media (max-width: 1200px) {
+  .product {
+    width: 30%;
+    margin: 1rem;
+  }
+
+  .product img {
+    max-height: 200px;
+  }
+}
+
+/* Other necessary responsive adjustments */
+@media (max-width: 768px) {
+  .product {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .product h3 {
+    font-size: 1rem;
+  }
+
+  .product p {
+    font-size: 0.9rem;
+  }
+
+  .product p.price {
+    font-size: 0.9rem;
+  }
+
+  .product a,
+  .product button.add-cart {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+}
+
+/* Pagination Section */
+@media (max-width: 480px) {
+  .pagination a {
+    padding: 8px 16px;
+    font-size: 0.8rem;
+  }
+}

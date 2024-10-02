@@ -1,0 +1,254 @@
+/* Menggunakan variabel root yang sudah ada */
+:root {
+  --main-color: #0e2431;
+  --para-font: #777777;
+  --black: #4b4b4b;
+  --bg: #7b0000;
+  --white: #fff;
+  --pink: #e7319a;
+  --ijo: #006600;
+  --kuning: #fea116;
+  --terang: rgba(254, 161, 22, 0.9);
+  --merah: #f2230b;
+  --latar: #ffeedd;
+}
+
+/* Reset and global styles */
+* {
+  font-family: Poppins, "Source Sans Pro";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  transition: 0.2s linear;
+}
+
+html {
+  font-size: 90%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 9rem;
+}
+
+body {
+  font-family: Poppins, "Source Sans Pro";
+  background-color: var(--latar);
+}
+
+/* Heading styles */
+.heading {
+  color: var(--black);
+  font-size: 5rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.heading span {
+  color: var(--ijo);
+}
+
+.heading-description {
+  text-align: center;
+  font-size: 1.8rem;
+  color: var(--para-font);
+  margin-bottom: 3rem;
+}
+
+/* Reviews section styles */
+.reviews {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  padding: 2rem 7%;
+}
+
+.reviews-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  justify-items: center;
+  align-items: center;
+}
+
+/* Review box styles */
+.review-box-container {
+  display: flex;
+  width: 100%;
+}
+
+.review-box {
+  width: 100%;
+  max-width: 50rem;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Mengurangi bayangan */
+  border-radius: 0.5rem; /* Mengurangi radius border */
+  background-color: var(--white);
+  padding: 1rem; /* Mengurangi padding */
+  overflow: hidden;
+  margin: 10px 10px 10px 10px;
+  transition: transform 0.3s ease;
+}
+
+.review-box:hover {
+  transform: translateY(-10px);
+}
+
+/* Profile image styles */
+.profile-img {
+  width: 3rem; /* Mengurangi ukuran gambar profil */
+  height: 3rem; /* Mengurangi ukuran gambar profil */
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 10px;
+}
+
+.profile-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Profile section styles */
+.profile {
+  display: flex;
+  align-items: center;
+}
+
+.time {
+  text-align: right;
+  font-size: 0.8rem;
+  color: var(--para-font);
+}
+
+.name-user {
+  display: flex;
+  flex-direction: column;
+}
+
+.name-user strong {
+  color: var(--black);
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+}
+
+.name-user span {
+  color: #979797;
+  font-size: 0.8rem;
+}
+
+.box-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Client comment styles */
+.client-comment p {
+  font-size: 1.2rem;
+  color: #4b4b4b;
+}
+
+input#add-comment {
+  border: 1px solid #ccc; /* Warna dan ketebalan garis */
+  border-radius: 5px; /* Radius sudut */
+  padding: 0.5rem; /* Ruang isi di sekitar teks */
+  width: 100%; /* Lebar input sesuai dengan parentnya */
+  box-sizing: border-box; /* Menghitung padding dan border ke dalam total lebar */
+  margin-bottom: 1rem;
+}
+
+/* Add review box styles */
+#add-review {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.add-review-box {
+  width: 100%;
+  max-width: 50rem; /* Menyesuaikan lebar maksimum */
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Mengurangi bayangan */
+  border-radius: 0.5rem; /* Mengurangi radius border */
+  background-color: var(--white);
+  padding: 1rem; /* Mengurangi padding */
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.add-review-box:hover {
+  transform: translateY(-10px);
+}
+
+.add-review-box form {
+  display: flex;
+  flex-direction: column;
+}
+
+.add-review-box textarea {
+  width: 100%;
+  height: 150px;
+  height: 150px;
+  border: 1px solid var(--para-font);
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.add-review-box button {
+  align-self: flex-end;
+  padding: 10px 20px;
+  background-color: var(--ijo);
+  color: var(--white);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-review-box button:hover {
+  background-color: darkgreen;
+}
+
+button[name="submit"]:hover {
+  background-color: #4caf50; /* Warna latar belakang ketika dihover */
+  color: white; /* Warna teks ketika dihover */
+  transform: scale(1.1);
+}
+
+/* Adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+  .reviews {
+    padding: 2rem 5%;
+  }
+
+  .review-box-container {
+    flex-direction: column;
+  }
+
+  .review-box {
+    max-width: 100%;
+  }
+
+  .add-review-box {
+    max-width: 100%;
+  }
+}
+
+/* Further adjustments for even smaller screens */
+@media screen and (max-width: 480px) {
+  .reviews {
+    padding: 2rem 2%;
+  }
+
+  .add-review-box,
+  .review-box {
+    padding: 1rem;
+  }
+
+  .add-review-box {
+    margin-bottom: 2rem;
+  }
+}
